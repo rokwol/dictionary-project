@@ -5,3 +5,13 @@
 .App h1 {
   margin: 0;
 }
+
+.App .RW-logo {
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+.App .App-footer {
+  text-align: center;
+  margin: 20px 0;
+}

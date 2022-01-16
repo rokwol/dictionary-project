@@ -1,14 +1,11 @@
-.App {
-  text-align: center;
-}
-
-.App h1 {
-  margin: 0;
-}
-
-.App .RW-logo {
+.App img {
   max-width: 150px;
+  display: block;
   margin: 0 auto;
+}
+
+.App a {
+  text-decoration: none;
 }
 
 .App .App-footer {

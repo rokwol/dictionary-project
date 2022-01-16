@@ -15,8 +15,9 @@ export default function App() {
         </main>
         <footer className="App-footer">
           <small>
-            This project was coded by Roksolana Woloszyn and is open-sourced on
-            Github.
+            This project was coded by Roksolana Woloszyn and is open-sourced on{" "}
+            {""}
+            <a href="https://github.com/rokwol/dictionary-project"> Github.</a>
           </small>
         </footer>
       </div>

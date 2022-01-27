@@ -3,32 +3,52 @@ import Results from "./Results";
 import axios from "axios";
 import "./Dictionary.css";
 
-export default function Dictionary() {
-  let [keyword, setKeyword] = useState("");
+export default function Dictionary(props) {
+  let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(null);
+  let [loaded, setLoaded] = useState(false);
 
   function HandleResponse(response) {
     setResults(response.data[0]);
   }
 
-  function Search(event) {
-    event.preventDefault();
-
+  function Search() {
     //documentation: https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(HandleResponse);
+  }
+
+  function HandleSubmit(event) {
+    event.preventDefault();
+    Search();
   }
 
   function HandleKeywordChange(event) {
     setKeyword(event.target.value);
   }
 
-  return (
-    <div className="Dictionary">
-      <form onSubmit={Search}>
-        <input type="search" autoFocus={true} onChange={HandleKeywordChange} />
-      </form>
-      <Results results={results} />
-    </div>
-  );
+  function Load() {
+    setLoaded(true);
+    Search();
+  }
+
+  if (loaded) {
+    return (
+      <div className="Dictionary">
+        <section>
+          <form onSubmit={HandleSubmit}>
+            <input
+              type="search"
+              autoFocus={true}
+              onChange={HandleKeywordChange}
+            />
+          </form>
+        </section>
+        <Results results={results} />
+      </div>
+    );
+  } else {
+    Load();
+    return "Loading";
+  }
 }

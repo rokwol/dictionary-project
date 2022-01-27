@@ -1,7 +1,14 @@
-.App img {
-  max-width: 150px;
-  display: block;
-  margin: 0 auto;
+.App h1,
+h2,
+h3,
+a {
+  color: #113f67;
+}
+
+.App .App-header h1 {
+  font-family: "DM Serif Display", serif;
+  text-align: center;
+  font-size: 30px;
 }
 
 .App a {

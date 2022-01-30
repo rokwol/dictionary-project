@@ -1,5 +1,6 @@
 import React from "react";
 import Dictionary from "./Dictionary";
+import icon from "./undraw_book_lover.svg";
 import "./App.css";
 
 export default function App() {
@@ -7,6 +8,8 @@ export default function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
+          <img src={icon} alt="teaching" className="img-fluid teaching-icon" />
+
           <h1>rokwol dictionary</h1>
         </header>
         <main>

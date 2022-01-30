@@ -7,11 +7,10 @@
 .Phonetic a {
   padding: 8px 10px;
   margin: 20px 10px 5px 0;
+  background-color: #a2a8d3;
   color: #e7eaf6;
   font-size: 16px;
-  background-color: #a2a8d3;
-  border-radius: 4px;
-  text-decoration: none;
+  border-radius: 10px;
   transition: all 150ms ease-in-out;
 }
 
@@ -20,7 +19,7 @@
   color: #e7eaf6;
 }
 
-.phoneticText {
+.Phonetic .phoneticText {
   opacity: 0.7;
   font-size: 16px;
 }

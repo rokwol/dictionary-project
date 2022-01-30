@@ -2,12 +2,21 @@
   text-align: center;
 }
 
-.Dictionary input {
+.Dictionary input,
+button {
   width: 100%;
   border: 1px solid #38598b;
   background-color: #e7eaf6;
   border-radius: 4px;
   padding: 5px;
+  margin-top: 5px;
+  transition: all 150ms ease-in-out;
+}
+
+.Dictionary button:hover {
+  background-color: #b7bce4;
+  border: 1px solid #b7bce4;
+  color: #e7eaf6;
 }
 
 .Dictionary section {
@@ -19,7 +28,7 @@
 }
 
 .Dictionary h1 {
-  font-family: "Lato", sans-serif;
+  font-family: "DM Serif Display", serif;
   font-size: 18px;
   margin: 10px 0;
   font-weight: bolder;

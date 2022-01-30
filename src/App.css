@@ -22,3 +22,9 @@ a {
   text-align: center;
   margin: 20px 0;
 }
+
+.App .teaching-icon {
+  max-width: 150px;
+  display: block;
+  margin: 10px auto 10px;
+}
